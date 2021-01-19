@@ -1,0 +1,22 @@
+table {
+    @apply items-center w-full bg-transparent border-collapse;
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+    tbody tr:hover {
+        box-shadow: 2px 6px 10px -10px #888888;
+    }
+    th {
+        @apply px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left;
+    }
+    td {
+        @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 bg-white;
+    }
+  }
+  .pagination {
+    padding: 0.5rem;
+  }

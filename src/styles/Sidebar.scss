@@ -1,0 +1,92 @@
+.magic-container {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar-shrink {
+  height: 100%;
+  overflow-y: auto;
+  background: $base-primary-color;
+}
+
+.main-content {
+  background-color: #fff;
+  height: 100%;
+  left: 0;
+  position: relative;
+  transition: all 0.5s ease 0s;
+  margin-right: 60px;
+  transform: translate3d(60px, 0, 0);
+  z-index: 1;
+}
+
+.sidebar-left-nav {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  transform: translate3d(-190px, 0, 0);
+  width: 250px;
+  z-index: 2;
+}
+
+.opened .sidebar-left-nav {
+  transition: transform 0.5s ease 0s;
+  transform: translate3d(0, 0, 0);
+}
+
+.opened .main-content {
+  margin-right: 250px;
+  transition: all 0.5s ease 0s;
+  transform: translate3d(250px, 0, 0);
+}
+
+.menu-list {
+  @apply w-full;
+  @apply flex;
+  @apply flex-col;
+  @apply text-gray-300;
+  @apply cursor-pointer;
+}
+
+.menu-list:hover,
+.submenu-list:hover {
+  @apply text-white;
+}
+
+.menu-list.active,
+.menu-list.collapsed {
+  @apply bg-primary-dark;
+}
+
+.menu-list.active {
+  @apply text-white #{!important};
+}
+
+.menu-list .submenu {
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.menu-list.collapsed .submenu {
+  transition: max-height 1s ease-in;
+  height: auto;
+  max-height: 500px;
+}
+
+.submenu-list {
+  @apply menu-list;
+}
+
+.submenu-list > div {
+  @apply pt-3 pl-6 pb-3 pr-3;
+}
+
+.submenu-list.active {
+  @apply text-white #{!important};
+
+  background-color: #212121;
+}

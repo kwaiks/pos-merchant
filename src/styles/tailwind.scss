@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* purgecss end ignore */
+@import "tailwindcss/utilities";
+
+/* purgecss start ignore */
+@import "variables";
+@import "Theme.scss";
+@import "Sidebar.scss";
+@import "Authentication.scss";
+@import "Table.scss";
+@import "Dropdown.scss";
+@import "SelectDropdown.scss";

@@ -1,0 +1,59 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+input {
+  @apply border-none px-1;
+}
+
+input:focus {
+  caret-color: $base-primary-color;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.bg-primary-light {
+  background-color: $base-primary-light;
+}
+
+.bg-primary {
+  background-color: $base-primary-color;
+}
+
+.bg-secondary {
+  background-color: $base-secondary-color;
+}
+
+.bg-primary-dark {
+  background-color: $base-primary-dark;
+}
+
+.btn {
+  @apply text-white px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 bg-blue-500 text-sm shadow hover:shadow-lg ease-linear transition-all duration-150 cursor-pointer;
+}
+
+.btn.btn-rounded {
+  @apply rounded-full;
+}
+
+.btn.btn-primary {
+  @apply bg-primary;
+  @apply text-white;
+}
+
+.rc-time-picker-input {
+  @apply border-none #{!important};
+  @apply p-0;
+}
+
+.modal-content {
+  @apply absolute w-1/2 p-4 outline-none bg-white inset-0 m-auto rounded border border-gray-200;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-50;
+}
